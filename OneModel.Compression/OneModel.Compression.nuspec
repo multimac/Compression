@@ -12,6 +12,9 @@
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
     </frameworkAssemblies>
+    <dependencies>
+      <dependency id="Autofac" version="[3.5.2,4.0.0)" />
+    </dependencies>
   </metadata>
   <files>
     <file src="Dependencies\7z.exe" target="content/Dependencies" />
