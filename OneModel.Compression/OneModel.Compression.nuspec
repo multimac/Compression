@@ -12,16 +12,12 @@
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
     </frameworkAssemblies>
-    <dependencies>
-      <dependency id="Autofac" version="[3.5.2,4.0.0)" />
-    </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\OneModel.Compression.pdb" target="lib/net46" />
-    
     <file src="Dependencies\7z.exe" target="content/Dependencies" />
     <file src="Dependencies\lzo1.dll" target="content/Dependencies" />
     <file src="Dependencies\lzop.exe" target="content/Dependencies" />
     <file src="Install.ps1" target="tools" />
+    <file src="bin\Release\OneModel.Compression.pdb" target="lib/net46" />
   </files>
 </package>
