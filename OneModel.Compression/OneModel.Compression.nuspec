@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>OneModel.Compression</id>
+    <version>1.0.0</version>
+    <authors>One Model</authors>
+    <projectUrl>https://github.com/One-Model/Compression</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/One-Model/Compression/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Utilities for compressing and decompressing files.</description>
+    <copyright>Copyright 2016</copyright>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" />
+    </frameworkAssemblies>
+    <dependencies>
+      <dependency id="Autofac" version="[3.5.2,4.0.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\OneModel.Compression.pdb" target="lib/net46" />
+    
+    <file src="Dependencies\7z.exe" target="content/Dependencies" />
+    <file src="Dependencies\lzo1.dll" target="content/Dependencies" />
+    <file src="Dependencies\lzop.exe" target="content/Dependencies" />
+    <file src="Install.ps1" target="tools" />
+  </files>
+</package>

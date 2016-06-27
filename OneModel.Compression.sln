@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneModel.Compression", "OneModel.Compression\OneModel.Compression.csproj", "{743F2A24-9E77-4564-A218-4B322FDDA797}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneModel.Compression.UnitTests", "OneModel.Compression.UnitTests\OneModel.Compression.UnitTests.csproj", "{3AC636A6-7ACA-4999-86E6-FE8EED72E13E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2B9787F3-BAF4-424E-97DB-B574A1DF1A62}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{743F2A24-9E77-4564-A218-4B322FDDA797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743F2A24-9E77-4564-A218-4B322FDDA797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743F2A24-9E77-4564-A218-4B322FDDA797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743F2A24-9E77-4564-A218-4B322FDDA797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC636A6-7ACA-4999-86E6-FE8EED72E13E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC636A6-7ACA-4999-86E6-FE8EED72E13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC636A6-7ACA-4999-86E6-FE8EED72E13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC636A6-7ACA-4999-86E6-FE8EED72E13E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
