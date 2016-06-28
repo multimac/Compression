@@ -4,7 +4,7 @@ using OneModel.Compression.Compression;
 
 namespace OneModel.Compression.Autofac
 {
-    public class CompressionModule : Module
+    public class LzoCompressionModule : Module
     {
         public string PathToLzop { get; set; }
 

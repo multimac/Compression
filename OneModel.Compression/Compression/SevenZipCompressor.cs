@@ -1,31 +1,34 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 
 namespace OneModel.Compression.Compression
 {
-    public class LzoCompressor : ICompressor
+    public class SevenZipCompressor : ICompressor
     {
-        private readonly string _pathToLzop;
+        private readonly string _pathToSevenZip;
 
-        public LzoCompressor(string pathToLzop)
+        public SevenZipCompressor(string pathToSevenZip)
         {
-            _pathToLzop = pathToLzop;
+            _pathToSevenZip = pathToSevenZip;
         }
 
         public ICompressResult Compress(string inputPath, string outputPath)
         {
-            var process = CreateProcess($"-o {outputPath} {inputPath}");
+            var process = CreateProcess($"a {outputPath} {inputPath}");
 
             RunProcess(process);
 
             var result = new CompressResult();
 
-            process.WaitForExit();
+            HandleOutput(process, line =>
+            {
+                if (line != null && line.EndsWith(" OK"))
+                {
+                    result.Ok = true;
+                }
+            });
 
             result.ExitCode = process.ExitCode;
-
-            if (result.ExitCode == 0)
-                result.Ok = true;
 
             process.Close();
 
@@ -49,7 +52,7 @@ namespace OneModel.Compression.Compression
                     RedirectStandardError = true,
                     RedirectStandardInput = true,
                     RedirectStandardOutput = true,
-                    FileName = _pathToLzop,
+                    FileName = _pathToSevenZip,
                     Arguments = args
                 }
             };

@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\DecompressionModule.cs" />
+    <Compile Include="Autofac\SevenZipCompressionModule.cs" />
     <Compile Include="Compression\CompressResult.cs" />
     <Compile Include="Compression\ICompressResult.cs" />
-    <Compile Include="Compression\ILzoCompressor.cs" />
+    <Compile Include="Compression\ICompressor.cs" />
     <Compile Include="Compression\LzoCompressor.cs" />
+    <Compile Include="Compression\SevenZipCompressor.cs" />
     <Compile Include="Decompression\ExtractResult.cs" />
     <Compile Include="Decompression\IExtractResult.cs" />
     <Compile Include="Decompression\IListResult.cs" />
@@ -56,7 +58,7 @@
     <Compile Include="Decompression\ListResultItem.cs" />
     <Compile Include="Decompression\SevenZipWrapper.cs" />
     <Compile Include="Decompression\TestResult.cs" />
-    <Compile Include="Autofac\CompressionModule.cs" />
+    <Compile Include="Autofac\LzoCompressionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\TempFolder.cs" />
   </ItemGroup>

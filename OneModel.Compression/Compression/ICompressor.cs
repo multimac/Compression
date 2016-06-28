@@ -1,6 +1,6 @@
 ﻿namespace OneModel.Compression.Compression
 {
-    public interface ILzoCompressor
+    public interface ICompressor
     {
         ICompressResult Compress(string inputPath, string outputPath);
     }
