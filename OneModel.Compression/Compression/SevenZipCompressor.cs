@@ -22,7 +22,7 @@ namespace OneModel.Compression.Compression
 
             HandleOutput(process, line =>
             {
-                if (line != null && line.EndsWith(" OK"))
+                if (line != null && line.EndsWith(" Ok"))
                 {
                     result.Ok = true;
                 }
