@@ -19,16 +19,13 @@ namespace OneModel.Compression.Compression
             RunProcess(process);
 
             var result = new CompressResult();
-            
-            HandleOutput(process, line =>
-            {
-                if (line != null && line.EndsWith(" OK"))
-                {
-                    result.Ok = true;
-                }
-            });
+
+            process.WaitForExit();
 
             result.ExitCode = process.ExitCode;
+
+            if (result.ExitCode == 0)
+                result.Ok = true;
 
             process.Close();
 
