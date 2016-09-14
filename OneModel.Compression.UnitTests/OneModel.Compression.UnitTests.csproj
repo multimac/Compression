@@ -111,6 +111,10 @@
       <Project>{743F2A24-9E77-4564-A218-4B322FDDA797}</Project>
       <Name>OneModel.Compression</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OneModel.TemporaryFolder\OneModel.TemporaryFolder.csproj">
+      <Project>{C358A453-D976-4D81-9CBD-477A5F849455}</Project>
+      <Name>OneModel.TemporaryFolder</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
