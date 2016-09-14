@@ -39,7 +39,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="OneModel.TemporaryFolder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\OneModel.TemporaryFolder.0.0.3\lib\net46\OneModel.TemporaryFolder.dll</HintPath>
+      <HintPath>..\packages\OneModel.TemporaryFolder.0.0.4\lib\net46\OneModel.TemporaryFolder.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -86,7 +86,9 @@
     <None Include="OneModel.Compression.nuspec">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Dependencies\7z.exe">
