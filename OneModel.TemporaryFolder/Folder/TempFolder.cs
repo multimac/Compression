@@ -7,13 +7,16 @@ namespace OneModel.TemporaryFolder.Folder
     /// For convenience. Creates a unique folder in the temp dir,
     /// and cleans up once disposed.
     /// </summary>
-    public class TempFolder : ITempFolder, IDisposable
+    public class TempFolder : ITempFolder
     {
         private int _nextId;
         private readonly string _path;
 
-        public string Path => _path;
-
+        public string GetPath()
+        {
+            return _path;
+        }
+        
         /// <summary>
         /// Creates a unique folder in the temp directory. Calling Dispose()
         /// will clean up the new folder, and anything inside it.
@@ -21,7 +24,7 @@ namespace OneModel.TemporaryFolder.Folder
         public TempFolder()
         {
             _nextId = 0;
-            _path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), Guid.NewGuid().ToString());
+            _path = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
             Directory.CreateDirectory(_path);
         }
 
@@ -39,7 +42,7 @@ namespace OneModel.TemporaryFolder.Folder
         /// <returns></returns>
         public string CreateUniqueFilename()
         {
-            return System.IO.Path.Combine(_path, Guid.NewGuid().ToString());
+            return Path.Combine(_path, Guid.NewGuid().ToString());
         }
 
         public void Dispose()

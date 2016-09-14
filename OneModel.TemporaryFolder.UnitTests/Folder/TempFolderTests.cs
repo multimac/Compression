@@ -12,7 +12,7 @@ namespace OneModel.TemporaryFolder.UnitTests.Folder
             string tempFolderPath;
             using (var tempFolder = new TempFolder())
             {
-                tempFolderPath = tempFolder.Path;
+                tempFolderPath = tempFolder.GetPath();
                 File.AppendAllText(tempFolder.CreateUniqueFilename(), "test");
             }
 

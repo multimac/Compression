@@ -22,10 +22,10 @@ namespace OneModel.Compression.UnitTests.Decompression.SevenZipWrappers
         {
             using (var output = new TempFolder())
             {
-                var expectedFilePath = $"{output.Path}\\{expectedFileName}";
+                var expectedFilePath = $"{output.GetPath()}\\{expectedFileName}";
 
                 var wrapper = new SevenZipWrapper(".\\Dependencies\\7z.exe");
-                var result = wrapper.Extract($".\\Decompression\\Inputs\\{archiveName}", output.Path);
+                var result = wrapper.Extract($".\\Decompression\\Inputs\\{archiveName}", output.GetPath());
 
                 Assert.True(result.Ok);
                 Assert.Equal(expectedArchiveType, result.Type);
@@ -41,10 +41,10 @@ namespace OneModel.Compression.UnitTests.Decompression.SevenZipWrappers
             using (var tarOutput = new TempFolder())
             {
                 var wrapper = new SevenZipWrapper(".\\Dependencies\\7z.exe");
-                var unzipped = wrapper.Extract($".\\Decompression\\Inputs\\document.tar.gz", gzOutput.Path);
-                var untarred = wrapper.Extract(Directory.GetFiles(gzOutput.Path)[0], tarOutput.Path);
+                var unzipped = wrapper.Extract($".\\Decompression\\Inputs\\document.tar.gz", gzOutput.GetPath());
+                var untarred = wrapper.Extract(Directory.GetFiles(gzOutput.GetPath())[0], tarOutput.GetPath());
                 
-                var expectedFilePath = $"{tarOutput.Path}\\document.txt";
+                var expectedFilePath = $"{tarOutput.GetPath()}\\document.txt";
                 
                 Assert.True(unzipped.Ok);
                 Assert.Equal("tar", untarred.Type);
