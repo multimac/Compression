@@ -16,8 +16,3 @@ before_build:
 build:
   publish_nuget: true
   verbosity: minimal
-artifacts:
-  - path: OneModel.Compression\bin\$(configuration)
-    name: OneModel.Compression
-  - path: OneModel.TemporaryFolder\bin\$(configuration)
-    name: OneModel.TemporaryFolder
