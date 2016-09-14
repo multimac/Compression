@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using OneModel.TemporaryFolder.Folder;
 using Xunit;
 
 namespace OneModel.TemporaryFolder.UnitTests.Folder

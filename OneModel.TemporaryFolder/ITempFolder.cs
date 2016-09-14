@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OneModel.TemporaryFolder.Folder
+namespace OneModel.TemporaryFolder
 {
     /// <summary>
     /// For convenience. Creates a unique folder in the temp dir,

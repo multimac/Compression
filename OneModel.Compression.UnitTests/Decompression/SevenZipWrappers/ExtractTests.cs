@@ -1,6 +1,6 @@
 ﻿using System.IO;
 using OneModel.Compression.Decompression;
-using OneModel.TemporaryFolder.Folder;
+using OneModel.TemporaryFolder;
 using Xunit;
 
 namespace OneModel.Compression.UnitTests.Decompression.SevenZipWrappers
