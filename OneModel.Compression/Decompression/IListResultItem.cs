@@ -8,9 +8,9 @@ namespace OneModel.Compression.Decompression
 
         string Attr { get; }
 
-        int Size { get; }
+        long Size { get; }
 
-        int Compressed { get; }
+        long Compressed { get; }
 
         string Name { get; }
     }

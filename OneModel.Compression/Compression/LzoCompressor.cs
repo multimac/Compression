@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using OneModel.Compression.Processes;
 
 namespace OneModel.Compression.Compression
 {
@@ -38,9 +39,9 @@ namespace OneModel.Compression.Compression
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        private Process CreateProcess(string args)
+        private IProcessWrapper CreateProcess(string args)
         {
-            return new Process
+            return new ProcessWrapper
             {
                 StartInfo = new ProcessStartInfo
                 {
@@ -59,7 +60,7 @@ namespace OneModel.Compression.Compression
         /// Runs a process, and waits for it to end.
         /// </summary>
         /// <param name="process"></param>
-        private void RunProcess(Process process)
+        private void RunProcess(IProcessWrapper process)
         {
             process.Start();
 
@@ -69,7 +70,7 @@ namespace OneModel.Compression.Compression
             }
         }
 
-        private void HandleOutput(Process process, Action<string> handler)
+        private void HandleOutput(IProcessWrapper process, Action<string> handler)
         {
             while (!process.StandardOutput.EndOfStream)
             {

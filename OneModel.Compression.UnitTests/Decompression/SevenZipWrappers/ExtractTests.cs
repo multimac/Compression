@@ -1,5 +1,7 @@
 ﻿using System.IO;
+using Moq;
 using OneModel.Compression.Decompression;
+using OneModel.Compression.Processes;
 using OneModel.TemporaryFolder;
 using Xunit;
 
@@ -50,6 +52,54 @@ namespace OneModel.Compression.UnitTests.Decompression.SevenZipWrappers
                 Assert.Equal("tar", untarred.Type);
                 Assert.Equal(true, File.Exists(expectedFilePath));
                 Assert.Equal(ExpectedContents, File.ReadAllText(expectedFilePath));
+            }
+        }
+
+        [Theory]
+        [InlineData("consoleOutputTest.txt")]
+        public void Test_Handles_Long_File_Sizes(string consoleOutputFile)
+        {
+            using (var reader = new StreamReader(File.OpenRead($".\\Decompression\\Outputs\\{consoleOutputFile}")))
+            {
+                var mockProcess = new Mock<IProcessWrapper>();
+                mockProcess.SetupGet(p => p.StandardOutput).Returns(reader);
+                mockProcess.SetupGet(p => p.HasExited).Returns(true);
+
+                var target = new SevenZipWrapper(string.Empty, mockProcess.Object);
+
+                target.Test(string.Empty);
+            }
+        }
+
+        [Theory]
+        [InlineData("consoleOutputList.txt")]
+        public void List_Handles_Long_File_Sizes(string consoleOutputFile)
+        {
+            using (var reader = new StreamReader(File.OpenRead($".\\Decompression\\Outputs\\{consoleOutputFile}")))
+            {
+                var mockProcess = new Mock<IProcessWrapper>();
+                mockProcess.SetupGet(p => p.StandardOutput).Returns(reader);
+                mockProcess.SetupGet(p => p.HasExited).Returns(true);
+
+                var target = new SevenZipWrapper(string.Empty, mockProcess.Object);
+
+                target.List(string.Empty);
+            }
+        }
+
+        [Theory]
+        [InlineData("consoleOutputExtract.txt")]
+        public void Extract_Handles_Long_File_Sizes(string consoleOutputFile)
+        {
+            using (var reader = new StreamReader(File.OpenRead($".\\Decompression\\Outputs\\{consoleOutputFile}")))
+            {
+                var mockProcess = new Mock<IProcessWrapper>();
+                mockProcess.SetupGet(p => p.StandardOutput).Returns(reader);
+                mockProcess.SetupGet(p => p.HasExited).Returns(true);
+
+                var target = new SevenZipWrapper(string.Empty, mockProcess.Object);
+
+                target.Extract(string.Empty, string.Empty);
             }
         }
     }

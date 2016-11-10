@@ -1,0 +1,17 @@
+﻿7-Zip [64] 15.12 : Copyright (c) 1999-2015 Igor Pavlov : 2015-11-19
+
+Scanning the drive for archives:
+1 file, 84086338 bytes (81 MiB)
+
+Listing archive: HRP1000.dat.gz
+
+--
+Path = HRP1000.dat.gz
+Type = gzip
+Physical Size = 84086338
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2014-08-15 07:26:03 .....   8120985676     84086338  HRP1000.dat
+------------------- ----- ------------ ------------  ------------------------
+2014-08-15 07:26:03         8120985676     84086338  1 files

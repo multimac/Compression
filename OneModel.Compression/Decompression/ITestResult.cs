@@ -13,16 +13,16 @@ namespace OneModel.Compression.Decompression
 
         string Type { get; }
 
-        int PhysicalSize { get; }
+        long PhysicalSize { get; }
 
-        int HeadersSize { get; }
+        long HeadersSize { get; }
 
         string CodePage { get; }
 
         bool Ok { get; }
 
-        int Size { get; }
+        long Size { get; }
 
-        int CompressedSize { get; }
+        long CompressedSize { get; }
     }
 }

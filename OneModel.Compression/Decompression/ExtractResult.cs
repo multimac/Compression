@@ -8,12 +8,12 @@
 
         public string Type { get; set; }
 
-        public int PhysicalSize { get; set; }
+        public long PhysicalSize { get; set; }
 
         public bool Ok { get; set; }
 
-        public int Size { get; set; }
+        public long Size { get; set; }
 
-        public int CompressedSize { get; set; }
+        public long CompressedSize { get; set; }
     }
 }

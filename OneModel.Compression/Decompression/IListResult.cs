@@ -10,7 +10,7 @@ namespace OneModel.Compression.Decompression
 
         string Type { get; }
 
-        int PhysicalSize { get; }
+        long PhysicalSize { get; }
 
         IReadOnlyCollection<IListResultItem> Entries { get; } 
     }

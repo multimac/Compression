@@ -8,12 +8,12 @@
 
         string Type { get; }
 
-        int PhysicalSize { get; }
+        long PhysicalSize { get; }
 
         bool Ok { get; }
 
-        int Size { get; }
+        long Size { get; }
 
-        int CompressedSize { get; }
+        long CompressedSize { get; }
     }
 }

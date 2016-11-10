@@ -59,6 +59,8 @@
     <Compile Include="Decompression\SevenZipWrapper.cs" />
     <Compile Include="Decompression\TestResult.cs" />
     <Compile Include="Autofac\LzoCompressionModule.cs" />
+    <Compile Include="Processes\IProcessWrapper.cs" />
+    <Compile Include="Processes\ProcessWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
