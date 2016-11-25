@@ -15,7 +15,7 @@ namespace OneModel.Compression.Compression
 
         public ICompressResult Compress(string inputPath, string outputPath)
         {
-            var process = CreateProcess($"-o {outputPath} {inputPath}");
+            var process = CreateProcess($"-o \"{outputPath}\" \"{inputPath}\"");
 
             RunProcess(process);
 
